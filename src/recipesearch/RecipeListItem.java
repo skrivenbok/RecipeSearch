@@ -33,8 +33,6 @@ public class RecipeListItem extends AnchorPane {
         labelName.setText(recipe.getName());
         imageView.setImage(recipe.getFXImage());
 
-      //  ImageView image = new ImageView (String.valueOf(recipe.getImage()));
-        //Label name = new Label (recipe.getName());
     }
 
     @FXML public void onClick(Event event){

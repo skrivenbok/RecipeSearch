@@ -23,8 +23,8 @@
             <AnchorPane fx:id="recipeDetailPane" prefHeight="509.0" prefWidth="399.0">
                <children>
                   <Button fx:id="closeButton" layoutX="288.0" layoutY="34.0" mnemonicParsing="false" onAction="#closeRecipeView" text="Stäng" />
-                  <Label fx:id="anchorLabel" layoutX="74.0" layoutY="59.0" text="Detail" />
-                  <ImageView fx:id="anchorImage" fitHeight="312.0" fitWidth="399.0" layoutX="2.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="detailLabel" layoutX="74.0" layoutY="59.0" text="Detail" />
+                  <ImageView fx:id="detailImage" fitHeight="312.0" fitWidth="399.0" layoutX="2.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
          </children></StackPane>

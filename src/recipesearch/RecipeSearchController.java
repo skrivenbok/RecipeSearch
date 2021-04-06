@@ -19,7 +19,7 @@ import se.chalmers.ait.dat215.lab2.RecipeDatabase;
 
 
 public class RecipeSearchController implements Initializable {
-    @FXML private FlowPane recipeListFlowPane;
+    @FXML private FlowPane recipeListFlowPane; // where we show the Recipes Images
     @FXML private ComboBox<String> mainIngredient;
     @FXML private ComboBox<String> cuisine;
     @FXML private RadioButton all;
@@ -28,12 +28,14 @@ public class RecipeSearchController implements Initializable {
     @FXML private RadioButton hard;
     @FXML private Spinner<Integer> maxPrice;
     @FXML private Slider maxTime;
-    @FXML private Label minutes;  // TODO!
+    @FXML private Label minutes;  // TODO! minutes Label not used, and maxtime doesnt work properly.
 
-    @FXML private Label anchorLabel;
-    @FXML private ImageView anchorImage;
-    @FXML private Button closeButton;
+    //AnchorPane under stackpane, the detail view.
+    @FXML private Label detailLabel;
+    @FXML private ImageView detailImage;
+    @FXML private Button closeButton; // Todo! remove or fix, dont know if this should be used.
 
+    //Todo Step 11, which anchorpane should be used and how do we connect the search and detailview? closerecipe,openrecipe. openrecipe is called from onclick in listitem
     @FXML private SplitPane splitPane;
     @FXML private AnchorPane searchPane;
     @FXML private AnchorPane recipePane;
@@ -134,13 +136,14 @@ public class RecipeSearchController implements Initializable {
 
         }
    }
-   public void populateRecipeDetailView(Recipe recipe){
-        anchorLabel.setText(recipe.getName());
-        anchorImage.setImage(recipe.getFXImage());
+
+    public void populateRecipeDetailView(Recipe recipe){
+        detailLabel.setText(recipe.getName());
+        detailImage.setImage(recipe.getFXImage());
    }
 
    @FXML public void closeRecipeView(){
-        recipePane.toFront();
+        splitPane.toFront();
    }
    public void openRecipeView(Recipe recipe){
         populateRecipeDetailView(recipe);

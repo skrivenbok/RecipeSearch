@@ -20,7 +20,6 @@ public class RecipeBackendController  {
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     return db.search(new SearchFilter(difficulty,maxTime,cuisine,maxPrice,mainIngredient));
     }
-    @FXML
     public void setCuisine(String cuisine) {
         this.cuisine = null;
         if (cuisine.equals("Sverige") || cuisine.equals("Grekland") || cuisine.equals("Indien") || cuisine.equals("Asien") || cuisine.equals("Afrika") || cuisine.equals("Frankrike")) {
@@ -45,5 +44,5 @@ public class RecipeBackendController  {
         if(maxTime % 10 == 0) {
             this.maxTime = maxTime;
         } else this.maxTime = 0;
-    }
+    } //TODO , dont know about this one.
     }
