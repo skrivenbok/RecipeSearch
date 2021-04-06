@@ -41,7 +41,7 @@ public class RecipeSearchController implements Initializable {
     RecipeBackendController rbc = new RecipeBackendController();
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
-    
+    //.
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         updateRecipeList();
