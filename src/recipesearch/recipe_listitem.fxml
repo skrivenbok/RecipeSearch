@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root fx:id="anch" onMouseClicked="#onClick" prefHeight="100.0" prefWidth="495.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="301.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../recipes/recipe1.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelName" layoutX="234.0" layoutY="47.0" text="labelName" />
+   </children>
+</fx:root>
